@@ -1,0 +1,730 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "20193034_No8.ipynb",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/KwonChanJin/Python_Programing/blob/master/5%EC%9E%A5_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_%EA%B6%8C%EC%B0%AC%EC%A7%84%2C%20%EC%A7%80%EC%9C%A0%EC%A7%84\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5_lilYl1xrug",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.1 다음과 같이 파이썬 프로그램을 실행할 적에, 다음 밑줄 안에 들어갈 알맞은 결과는 무엇인가? 미리 예측해본 후 실행시켜보고 그 결과를 적으시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Carxpbphx4UR",
+        "colab_type": "code",
+        "outputId": "507f8ed7-40f9-45ed-8daa-f25109944f10",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 187
+        }
+      },
+      "source": [
+        "list_ex = [10,20,30,40,50,60,70]\n",
+        "high = 5\n",
+        "low = 3\n",
+        "print(\"(1)list_ex[low] = {}\".format(list_ex[low]))\n",
+        "print(\"(2)list_ex[low+2] = {}\".format(list_ex[low+2]))\n",
+        "print(\"(3)list_ex[high-low] = {}\".format(list_ex[high-low]))\n",
+        "print(\"(4)list_ex[low-high] = {}\".format(list_ex[low-high]))\n",
+        "print(\"(5)list_ex[-1] = {}\".format(list_ex[-1]))\n",
+        "print(\"(6)list_ex[-low] = {}\".format(list_ex[-low]))\n",
+        "print(\"(7)list_ex[2*3] = {}\".format(list_ex[2*3]))\n",
+        "print(\"(8)list_ex[2] * 3 = {}\".format(list_ex[2] * 3))\n",
+        "print(\"(9)list_ex[5%4] = {}\".format(list_ex[5%4]))\n",
+        "print(\"(10)len(list_ex) = {}\".format(len(list_ex)))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1)list_ex[low] = 40\n",
+            "(2)list_ex[low+2] = 60\n",
+            "(3)list_ex[high-low] = 30\n",
+            "(4)list_ex[low-high] = 60\n",
+            "(5)list_ex[-1] = 70\n",
+            "(6)list_ex[-low] = 50\n",
+            "(7)list_ex[2*3] = 70\n",
+            "(8)list_ex[2] * 3 = 90\n",
+            "(9)list_ex[5%4] = 20\n",
+            "(10)len(list_ex) = 7\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4xbb5LIwUPmy",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : 배열의 요소 접근 방법을 자세히 알 수 있어 좋았습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gtL86MKTy043",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.2 다음과 같은 파이썬 프로그램을 실행할 적에, 다음 밑줄 안에 들어갈 알맞은 결과는 무엇인가? 미리 예측해본 후 실행시켜보고 그 결과를 적으시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "O5cTQfSry-nb",
+        "colab_type": "code",
+        "outputId": "4b4e4fbd-7404-4085-bcb7-c70f812d2926",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 85
+        }
+      },
+      "source": [
+        "spell = ['s','w','e','e','t']\n",
+        "print(\"(1)spell = {}\".format(spell))\n",
+        "spell[3] = 'a'\n",
+        "print(\"(2)spell = {}\".format(spell))\n",
+        "spell[4] = 'r'\n",
+        "print(\"(3)spell = {}\".format(spell))\n",
+        "print(\"(4)spell * 2 = {}\".format(spell*2))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1)spell = ['s', 'w', 'e', 'e', 't']\n",
+            "(2)spell = ['s', 'w', 'e', 'a', 't']\n",
+            "(3)spell = ['s', 'w', 'e', 'a', 'r']\n",
+            "(4)spell * 2 = ['s', 'w', 'e', 'a', 'r', 's', 'w', 'e', 'a', 'r']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6GCdwjTZUY-R",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : 리스트의 연산을 자세히 알 수 있었습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nh03obfzzX1m",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.3 다음과 같은 list1, list2가 있을 경우 이중 for 루프를 사용하여 list1과 list2의 각 원소의 곱셈을 다음과 같이 출력하시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "QeWT4wY_ziSt",
+        "colab_type": "code",
+        "outputId": "1a263bb8-24af-44e1-e140-9940bb7213d6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 272
+        }
+      },
+      "source": [
+        "list1 = [3,5,7]\n",
+        "list2 = [2,3,4,5,6]\n",
+        "for n1 in list1:\n",
+        "  for n2 in list2:\n",
+        "    print(\"{} * {} = {}\".format(n1,n2,n1*n2))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "3 * 2 = 6\n",
+            "3 * 3 = 9\n",
+            "3 * 4 = 12\n",
+            "3 * 5 = 15\n",
+            "3 * 6 = 18\n",
+            "5 * 2 = 10\n",
+            "5 * 3 = 15\n",
+            "5 * 4 = 20\n",
+            "5 * 5 = 25\n",
+            "5 * 6 = 30\n",
+            "7 * 2 = 14\n",
+            "7 * 3 = 21\n",
+            "7 * 4 = 28\n",
+            "7 * 5 = 35\n",
+            "7 * 6 = 42\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cLiwxj1gUgPg",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : for문을 이용해 리스트의 요소를 접근 하는 방법을 자세히 알 수 있었습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4HoRcVKvzvDV",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.4 a = [2,3,4,5,6]이 있을 경우, 이 리스트의 순서를 바꾸는 기능을 reverse() 메소드를 사용하지 않고 for-in문과 pop()메소드를 사용하여 구현하시오(힌트 : 리스트의 원소를 하나하나 순회하면서 pop() 메소드를 호출하시오.)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "6gZkokLpz-Ne",
+        "colab_type": "code",
+        "outputId": "a7d1817c-a8e9-45b5-e6e4-998080030947",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "a = [2,3,4,5,6]\n",
+        "rev_a = []\n",
+        "print(a)\n",
+        "for i in range(0,len(a),1):\n",
+        "  rev_a.append(a.pop())\n",
+        "print(rev_a)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[2, 3, 4, 5, 6]\n",
+            "[6, 5, 4, 3, 2]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mIaHUYHSU10R",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : pop() 메소드를 사용하는 법을 알 수 있었습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mGjvsjCs1m-z",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.5 다음과 같은 문자열을 가진 두 개의 리스트 l1, l2가 있을 경우 l1과 l2의 조합을 이용하여 다음과 같이 출력하시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "RSLgr0Ie1-Vs",
+        "colab_type": "code",
+        "outputId": "aaac09ae-0c56-447b-e2cb-8f94022db5b2",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 119
+        }
+      },
+      "source": [
+        "l1 = ['I like','I love']\n",
+        "l2 = ['fan cake','kiwi juice','espresso']\n",
+        "for s1 in l1:\n",
+        "  for s2 in l2:\n",
+        "    print(\"{} {}\".format(s1,s2))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "I like fan cake\n",
+            "I like kiwi juice\n",
+            "I like espresso\n",
+            "I love fan cake\n",
+            "I love kiwi juice\n",
+            "I love espresso\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4EtQpXivU-ai",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : for문을 이용해 문자를 조합해 흥미로웠습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "oVP7sQHR2Oxx",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.6 다음은 리스트를 이용한 프로그램이다. 빈 칸에 들어갈 알맞은 내용을 적으시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SbMIpmMg2TwL",
+        "colab_type": "code",
+        "outputId": "0cf6520d-90da-463a-fb9b-2cce81a9fadb",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 85
+        }
+      },
+      "source": [
+        "list1 = [2,3,4,1,32]\n",
+        "print(\"(1)max(list1) = {}\".format(max(list1)))\n",
+        "print(\"(2)sum(list1) = {}\".format(sum(list1)))\n",
+        "list1.remove(32)\n",
+        "print('(3)list = {}'.format(list1))\n",
+        "list1.sort()\n",
+        "print('(4)list = {}'.format(list1))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1)max(list1) = 32\n",
+            "(2)sum(list1) = 42\n",
+            "(3)list = [2, 3, 4, 1]\n",
+            "(4)list = [1, 2, 3, 4]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aCQ7_56qVGN0",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : sum()메소드와 max() 메소드를 자세히 알 수 있어 좋았습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "R7JHMQXv2wgV",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.7 n_list라는 리스트에 [10,20,30,40,50,60]과 같은 5개의 원소가 있다. 주어진 리스트내의 모든 원소의 합을 구하여 출력하는 프로그램을 작성하시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "l7HnyZuW2421",
+        "colab_type": "code",
+        "outputId": "6aa81036-7a55-45c6-ee74-398d59167d1b",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "n_list = [10,20,30,50,60]\n",
+        "print(\"리스트의 원소들 : {}\".format(n_list))\n",
+        "print(\"리스트의 원소들의 합 : {}\".format(sum(n_list)))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "리스트의 원소들 : [10, 20, 30, 50, 60]\n",
+            "리스트의 원소들의 합 : 170\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "rBb3b0I9VSqO",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : 리스트를 출력하는 방법을 알아 좋았습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wE_BOMyz3ZiI",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.8 n_list라는 리스트에 [10,20,30,40,50,60]과 같은 5개의 원소가 있다. 주어진 리스트내의 모든 원소의 곱을 구하여 출력하는 프로그램을 작성하시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "O8nzHGmU3vEY",
+        "colab_type": "code",
+        "outputId": "15973938-dad7-4193-e125-deb6762b24d3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "n_list = [10,20,30,50,60]\n",
+        "print(\"리스트의 원소들 : {}\".format(n_list))\n",
+        "result = 1\n",
+        "for n in n_list:\n",
+        "  result *= n\n",
+        "print(\"리스트의 원소들의 곱 : {}\".format(result))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "리스트의 원소들 : [10, 20, 30, 50, 60]\n",
+            "리스트의 원소들의 곱 : 18000000\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4S7NMNzSVaa_",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웟던 점 : 리스트를 더 자유자제로 사용할 수 있게 되었습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nLCZP8wH36fj",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.9 임의의 정수값을 가진 리스트 n_list 에서 가장 큰 값을 구하는 프로그램을 max() 함수를 사용하지 말고 구현하여라."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ie1k9tle4Cyq",
+        "colab_type": "code",
+        "outputId": "61dab51f-ee20-41a1-fa94-f5dd0a709a05",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "n_list = [10,20,30,50,60]\n",
+        "print(\"리스트의 원소들 : {}\".format(n_list))\n",
+        "print(\"리스트의 원소들 중 최댓값 : {}\".format(sorted(n_list,reverse = True)[0]))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "리스트의 원소들 : [10, 20, 30, 50, 60]\n",
+            "리스트의 원소들 중 최댓값 : 60\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Qer1_Y3cViQD",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : 리스트를 정렬하여 최댓값을 구해 흥미로웠습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LF2Wfh-G4fEk",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.10 임의의 정수값을 가진 리스트 n_list 에서 가장 작은 값을 구하는 프로그램을 min() 함수를 사용하지 말고 구현하여라."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2T6UVcXQ4mM7",
+        "colab_type": "code",
+        "outputId": "4008622e-2934-4b8e-e442-fff12e2e3bd0",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "n_list = [10,20,30,50,60]\n",
+        "print(\"리스트의 원소들 : {}\".format(n_list))\n",
+        "print(\"리스트의 원소들 중 최솟값 : {}\".format(sorted(n_list)[0]))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "리스트의 원소들 : [10, 20, 30, 50, 60]\n",
+            "리스트의 원소들 중 최솟값 : 10\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "h2spy3GZVoxk",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : 리스트를 정렬하여 최솟값을 구해 흥미로웠습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3Er3osc-4quz",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.11 사용자로부터 5개의 수를 입력받은 후 다음과 같이 입력된 값들의 합, 평균, 최댓값, 최솟값을 출력하는 프로그램을 작성하시오. 이 때 반드시 입력된 값들은 리스트에 넣어서 min(),max(),sum() 함수를 사용하도록 하시오.(힌트: 평균은 sum(n_list),max(n_list),min(n_list)와 같이 구할 수 있다.)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "webkAGsT4-7W",
+        "colab_type": "code",
+        "outputId": "2cf2f0a7-2276-492c-b085-d85253674ecf",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 105
+        }
+      },
+      "source": [
+        "n_list = input(\"5개의 수를 입력하세요 : \").split()\n",
+        "n_list = list(map(int,n_list))\n",
+        "print('합 : {}'.format(sum(n_list)))\n",
+        "print(\"최댓값 : {}\".format(max(n_list)))\n",
+        "print(\"최솟값 : {}\".format(min(n_list)))\n",
+        "print(\"평균 : {}\".format(sum(n_list)/len(n_list)))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "5개의 수를 입력하세요 : 45 67 20 34 2\n",
+            "합 : 168\n",
+            "최댓값 : 67\n",
+            "최솟값 : 2\n",
+            "평균 : 33.6\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "colab_type": "text",
+        "id": "zNlkpJJ8WN9Q"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : 리스트의 요소들을 이용하여 연산하는 것을 이제 자유자제로 할 수 있겠습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "GjXZPM145V3D",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.12 사용자로부터 n을 입력받은 후, n개의 정수를 입력받도록 하시오. 그리고 다음과 같이 n개의 입력된 값들의 합, 평균, 최댓값, 최솟값을 출력하는 프로그램을 작성하시오. 이때 반드시 입력된 값들은 리스트에서 넣어서 sum(),min(),max() 함수를 사용하도록 하시오."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qATyOg7j5mfH",
+        "colab_type": "code",
+        "outputId": "cdd2fc48-aa4a-4e5c-b698-66654de32248",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 119
+        }
+      },
+      "source": [
+        "n = int(input(\"n을 입력하세요 : \"))\n",
+        "n_list = input(\"{}개의 수를 입력하세요: \".format(n)).split()\n",
+        "n_list = list(map(int,n_list))\n",
+        "print(\"합 : {}\".format(sum(n_list)))\n",
+        "print(\"평균 : {}\".format(sum(n_list)/len(n_list)))\n",
+        "print(\"최댓값 : {}\".format(max(n_list)))\n",
+        "print(\"최솟값 : {}\".format(min(n_list)))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "n을 입력하세요 : 6\n",
+            "6개의 수를 입력하세요: 45 67 20 34 2 100\n",
+            "합 : 268\n",
+            "평균 : 44.666666666666664\n",
+            "최댓값 : 100\n",
+            "최솟값 : 2\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dn3QY6dBW1mw",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : n개의 수를 받는 방법을 배워 좋았습니다. 어려웠던 점은 없습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HmmzLsH261Fi",
+        "colab_type": "text"
+      },
+      "source": [
+        "# 5.13 사용자로부터 n개의 값을 입력받은 후 입력된 값들의 평균(mean)과 표준편차(standard deviation)를 구하시오. 입력된 값들을 xi라고 할 때, 표준편차를 구하는 식은 다음과 같다."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "aOxtIuyc7MEr",
+        "colab_type": "code",
+        "outputId": "8a64f984-fd61-4a2e-fcad-4436dc1fa9d3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 87
+        }
+      },
+      "source": [
+        "n_list = input(\"n개의 수를 입력하세요 : \").split()\n",
+        "n_list = list(map(int,n_list))\n",
+        "print(\"합 : {}\".format(sum(n_list)))\n",
+        "mean = sum(n_list)/len(n_list)\n",
+        "print(\"평균 : {}\".format(mean))\n",
+        "xi = []\n",
+        "for n in n_list:\n",
+        "  xi.append((n-(mean))**2)\n",
+        "print(\"표준편차 : {}\".format((sum(xi)/len(n_list))**0.5))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "n개의 수를 입력하세요 : 45 67 20 34 2 100 23 45 67 89\n",
+            "합 : 492\n",
+            "평균 : 49.2\n",
+            "표준편차 : 29.71800800861323\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TPYsO0qmXAOk",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점 및 어려웠던 점 : 표준편차의 개념을 알게 되어 좋았습니다. 어려웠던 점은 "
+      ]
+    }
+  ]
+}

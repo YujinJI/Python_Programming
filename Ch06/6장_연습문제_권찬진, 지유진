@@ -1,0 +1,1064 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "20193003_No9.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/KwonChanJin/Python_Programing/blob/master/6%EC%9E%A5_%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C_%EA%B6%8C%EC%B0%AC%EC%A7%84%2C%20%EC%A7%80%EC%9C%A0%EC%A7%84\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gPXMX4KuPnNb",
+        "colab_type": "text"
+      },
+      "source": [
+        "1"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Yz72PdVJPlpE",
+        "colab_type": "code",
+        "outputId": "6cfd5dea-6457-45b7-f039-14970b87e334",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 108
+        }
+      },
+      "source": [
+        "price = {'김밥': 5000, '어묵': 3000, '떡뽁이': 2000} #딕셔너리 생성\n",
+        "print('(1)', price['김밥'])\n",
+        "price['김밥'] = 6000\n",
+        "print('(2)', price)\n",
+        "print('(3)', price.values())\n",
+        "print('(4)', price.keys())\n",
+        "print('(5) 이 식당의 메뉴 개수는 {}개 입니다.'.format(len(price))) #딕셔너리의 길이로 개수를 구함"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1) 5000\n",
+            "(2) {'김밥': 6000, '어묵': 3000, '떡뽁이': 2000}\n",
+            "(3) dict_values([6000, 3000, 2000])\n",
+            "(4) dict_keys(['김밥', '어묵', '떡뽁이'])\n",
+            "(5) 이 식당의 메뉴 개수는 3개 입니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kilEjuKD2BRi",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 딕셔너리의 기본적인 사용을 배울 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ifG9B8SYSgo0",
+        "colab_type": "text"
+      },
+      "source": [
+        "2"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "uY7ujBCSShty",
+        "colab_type": "code",
+        "outputId": "048e358e-f8e7-41f7-d803-5f337931f34c",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        }
+      },
+      "source": [
+        "price = {'김밥': 5000, '어묵': 3000, '떡뽁이': 2000} #딕셔너리 생성\n",
+        "price['순대'] = 4500\n",
+        "print('(2)', price)\n",
+        "print('(3)순대의 가격은 {}원 입니다.'.format(price['순대']))\n",
+        "print('(4)이 식당의 메뉴 개수는 {}개 입니다.'.format(len(price))) #딕셔너리의 길이로 개수를 구함"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(2) {'김밥': 5000, '어묵': 3000, '떡뽁이': 2000, '순대': 4500}\n",
+            "(3)순대의 가격은 4500원 입니다.\n",
+            "(4)이 식당의 메뉴 개수는 4개 입니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nlQUMwzP2HPz",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 앞 문제를 활용하여 간단하게 해결할 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "hJ3gbb3hTyA7",
+        "colab_type": "text"
+      },
+      "source": [
+        "3"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "NLlKar2HTy6o",
+        "colab_type": "code",
+        "outputId": "591db563-a9aa-4795-e01b-4ec9a1522c98",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 108
+        }
+      },
+      "source": [
+        "#메뉴판 만들기\n",
+        "menu = {'Americano': 3000, 'Ice Americano': 3500, 'Capuccino': 4000, 'Cafe Latte': 4500, 'Espresso': 3600}\n",
+        "for key in menu: #반복문 사용\n",
+        "  print('%-20s' % key, end='')\n",
+        "  print('가격 :', menu[key], '원')"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Americano           가격 : 3000 원\n",
+            "Ice Americano       가격 : 3500 원\n",
+            "Capuccino           가격 : 4000 원\n",
+            "Cafe Latte          가격 : 4500 원\n",
+            "Espresso            가격 : 3600 원\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "EycnCoIM2m_e",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 벨류와 키가 함께 프린트에 들어가지 않아 혼란스러웠지만 end=''를 사용하여 해결하였습니다."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Z7E_esvLe5-K",
+        "colab_type": "code",
+        "outputId": "c17bad57-a6d4-4eb0-ecda-1a55d6d33704",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 144
+        }
+      },
+      "source": [
+        "menu = {'Americano': 3000, 'Ice Americano': 3500, 'Capuccino': 4000, 'Cafe Latte': 4500, 'Espresso': 3600} #딕셔너리 생성\n",
+        "for key in menu:\n",
+        "  print('%-20s' % key, end='')\n",
+        "  print('가격 :', menu[key], '원')\n",
+        "choice = input('위의 메뉴중 하나를 선택하세요 :')\n",
+        "#if-else문을 사용하여 각기 다른 답변이 나오도록 함\n",
+        "if choice in menu:\n",
+        "  print('{}는 {}원 입니다. 결제를 부탁합니다.'.format(choice, menu[choice]))\n",
+        "else:\n",
+        "  print('미안합니다. {}는 메뉴에 없습니다.'.format(choice))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Americano           가격 : 3000 원\n",
+            "Ice Americano       가격 : 3500 원\n",
+            "Capuccino           가격 : 4000 원\n",
+            "Cafe Latte          가격 : 4500 원\n",
+            "Espresso            가격 : 3600 원\n",
+            "위의 메뉴중 하나를 선택하세요 :Espresso\n",
+            "Espresso는 3600원 입니다. 결제를 부탁합니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "g3Z1HT3ie5vP",
+        "colab_type": "code",
+        "outputId": "4f7f28dc-617c-44b3-f1d6-a8e021b932b8",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 144
+        }
+      },
+      "source": [
+        "menu = {'Americano': 3000, 'Ice Americano': 3500, 'Capuccino': 4000, 'Cafe Latte': 4500, 'Espresso': 3600}\n",
+        "for key in menu:\n",
+        "  print('%-20s' % key, end='')\n",
+        "  print('가격 :', menu[key], '원')\n",
+        "choice = input('위의 메뉴중 하나를 선택하세요 :')\n",
+        "if choice in menu:\n",
+        "  print('{}는 {}원 입니다. 결제를 부탁합니다.'.format(choice, menu[choice]))\n",
+        "else:\n",
+        "  print('미안합니다. {}는 메뉴에 없습니다.'.format(choice))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Americano           가격 : 3000 원\n",
+            "Ice Americano       가격 : 3500 원\n",
+            "Capuccino           가격 : 4000 원\n",
+            "Cafe Latte          가격 : 4500 원\n",
+            "Espresso            가격 : 3600 원\n",
+            "위의 메뉴중 하나를 선택하세요 :Fan Cake\n",
+            "미안합니다. Fan Cake는 메뉴에 없습니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5QR9igaD20yp",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 메뉴 선택 기계를 만든 것 같아서 프로그램을 짜고 뿌듯했습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "G6PFUeQUe5AD",
+        "colab_type": "text"
+      },
+      "source": [
+        "4"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "grtEFrvWgjbF",
+        "colab_type": "code",
+        "outputId": "d76089b7-221e-4544-a55b-7bda8f3a0084",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        }
+      },
+      "source": [
+        "#1) tuple에는 append 메소드가 없음\n",
+        "t = (10,20,30,40)\n",
+        "t += (50,)\n",
+        "print(\"1) =\",t)\n",
+        "\n",
+        "#2) tuple에는 remove 메소드가 없음, 만약 50이 원소에 있다면,\n",
+        "t = (10,20,50,30,40) #일 경우,\n",
+        "t = t[0:2] + t[3:5]  #슬라이싱을 통해 원소를 제거한다\n",
+        "print(\"2) =\",t)\n",
+        "\n",
+        "#3) tuple의 원소는 직접적으로 변경할수가 없음, 변경하기 위해선,\n",
+        "t = (10,20,30,40)\n",
+        "t = (0,) + t[1:4]\n",
+        "print(\"3) =\",t)\n"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1) = (10, 20, 30, 40, 50)\n",
+            "2) = (10, 20, 30, 40)\n",
+            "3) = (0, 20, 30, 40)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "3U7jQOvO27iE",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 튜플에는 append메소드가 없다는 것을 알게 되었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Uv8xQLedh6NA",
+        "colab_type": "text"
+      },
+      "source": [
+        "5"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "VUBg2kfahaAC",
+        "colab_type": "code",
+        "outputId": "98211103-6a1f-4029-d5c8-e46c2ec0f8e6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 126
+        }
+      },
+      "source": [
+        "t = (10, 20, 30, 40, 50, 60) #튜플 생성\n",
+        "print(t[0])\n",
+        "print(t[0:2])\n",
+        "print(t[1:])\n",
+        "print(t[:3])\n",
+        "print(t[1::2])\n",
+        "print(t[::-1])"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "10\n",
+            "(10, 20)\n",
+            "(20, 30, 40, 50, 60)\n",
+            "(10, 20, 30)\n",
+            "(20, 40, 60)\n",
+            "(60, 50, 40, 30, 20, 10)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FAOb940Q3RrU",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 문제가 요구한대로 출력해보니 튜플의 성질을 파악할 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bM2avJ2qicjd",
+        "colab_type": "text"
+      },
+      "source": [
+        "6"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9wVMa26Pidsj",
+        "colab_type": "code",
+        "outputId": "53af2013-bf79-462b-e3da-d466a579266b",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        }
+      },
+      "source": [
+        "#세 가지 종류의 튜플 생성\n",
+        "t1 = 'a', 'b', 'c'\n",
+        "t2 = ('a', 'b', 'c')\n",
+        "t3 = ('d', 'e')\n",
+        "print('(1)', t1 == t2)\n",
+        "print('(2)', t2 + t3)\n",
+        "print('(3)', [x + y for x in t1 for y in t3]) #반복을 이용"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1) True\n",
+            "(2) ('a', 'b', 'c', 'd', 'e')\n",
+            "(3) ['ad', 'ae', 'bd', 'be', 'cd', 'ce']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "naqr5jY93cCN",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 문제가 요구한대로 출력해보니 튜플의 성질을 파악할 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "nMMrC74Li_yR",
+        "colab_type": "text"
+      },
+      "source": [
+        "7"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Yl2tNw_UjBJU",
+        "colab_type": "code",
+        "outputId": "dd26e042-72f3-4501-fce3-1d0020532269",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "source": [
+        "#두 가지 투플 활용하기\n",
+        "t1 = ('a', 'b')\n",
+        "repeat_count = (2, 3, 4)\n",
+        "print([x * y for x in t1 for y in repeat_count])#반복문을 이용하여 출력"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['aa', 'aaa', 'aaaa', 'bb', 'bbb', 'bbbb']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MAEj-Afg3ofO",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 튜플에 익숙하지 않아 처음에는 낯설었지만 반복문을 이용하니 간단하게 해결할 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0dhHqkZJnby-",
+        "colab_type": "text"
+      },
+      "source": [
+        "8"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "6VVN6Vy0nc6H",
+        "colab_type": "code",
+        "outputId": "30d5d258-4674-4641-d6c5-f9f9b41c3eec",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "source": [
+        "tuple_lst = [(1, 2), (4, 5), (4, 2)] #튜플 생성\n",
+        "a_list = []\n",
+        "for i in range(3): \n",
+        "  tuple_a = tuple_lst[i]\n",
+        "  a = tuple_a[0] + tuple_a[1] #두 값을 더함\n",
+        "  a_list.append(a)\n",
+        "print('(1)', a_list)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(1) [3, 9, 6]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wa4jr3Sq6hw6",
+        "colab_type": "code",
+        "outputId": "e2982e52-aed7-402f-aa80-2147bf4232ea",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "source": [
+        "tuple_lst = [(1, 2), (4, 5), (4, 2)] #튜플 생성\n",
+        "a_list = []\n",
+        "for i in range(3):\n",
+        "  tuple_a = tuple_lst[i]\n",
+        "  a = tuple_a[0] * tuple_a[1] #두 값을 곱함\n",
+        "  a_list.append(a)\n",
+        "print('(2)', a_list)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "(2) [2, 20, 8]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WD7hzKAO4NwA",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 튜플의 성질은 리스트 성질과 비슷하다는 점을 이용하였습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IFMIrQ7761ZD",
+        "colab_type": "text"
+      },
+      "source": [
+        "9"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "z5KFLYF862bb",
+        "colab_type": "code",
+        "outputId": "5ce85bb0-0414-4e10-fc9c-302dfa02e8a3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 53
+        }
+      },
+      "source": [
+        "sale = (100, 121, 120, 130, 140, 120, 122, 123, 190, 125)\n",
+        "total = 0\n",
+        "print(\"일일 매출 기록: \", sale)\n",
+        "for i in range(len(sale)-1): #반복문을 이용하여 전체 값을 돌아가며 볼 수 있음\n",
+        "  if sale[i] > sale[i + 1]:\n",
+        "    total = total + 1 #매출이 감소하면 total값을 1씩 증가\n",
+        "print(\"지난 10일 동안 전일대비 매출이 감소한 날은 {}일입니다.\".format(total))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "일일 매출 기록:  (100, 121, 120, 130, 140, 120, 122, 123, 190, 125)\n",
+            "지난 10일 동안 전일대비 매출이 감소한 날은 3일입니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "b-tzNWyN4TQi",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 이전에 배운내용들을 활용하니 낯선 튜플도 금방 해결할 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Vf827kg584yX",
+        "colab_type": "text"
+      },
+      "source": [
+        "10"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9l_UQ8Y185iq",
+        "colab_type": "code",
+        "outputId": "84fe7277-bf7f-4e72-cc88-06dd9a197fc8",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "source": [
+        "given = (1,2,5,4,3,2,9,1,4,7,8,9,9)\n",
+        "dup = set()\n",
+        "appeared = []   # for문을 돌면서 given의 원소들을 저장\n",
+        "for n in given:\n",
+        "  if (n in appeared):  # given의 원소가 이미 appeared에 있으면 한 번 이상 원소가 나온 것이므로 dup(중복 원소 저장 집합)에 저장\n",
+        "    dup.add(n)\n",
+        "  else:\n",
+        "    appeared.append(n)   #given 원소가 없으면 appeared 리스트에 저장\n",
+        "print(\"중복 원소는: \",dup)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "중복 원소는:  {1, 2, 4, 9}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "xwI62v_J4aR8",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: set()을 어디에 이용해야할지 몰라 어려움을 느꼈습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "h9GYgGY1Yy75",
+        "colab_type": "text"
+      },
+      "source": [
+        "11"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tl5Qg51yYzvV",
+        "colab_type": "code",
+        "outputId": "b588fe06-d18c-41cf-de7d-ee07986bf914",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "source": [
+        "given = (1,2,5,4,3,2,1,4,7,8,9,9,3,7,3)\n",
+        "del_repeated = ()\n",
+        "for n in given:\n",
+        "  if (n in del_repeated):\n",
+        "    continue\n",
+        "  else:\n",
+        "    del_repeated += (n,)\n",
+        "print(\"중복 제거 튜플: \",del_repeated)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "중복 제거 튜플:  (1, 2, 5, 4, 3, 7, 8, 9)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JwRJUvYd4q-g",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 튜플에 대한 개념이 점점 잘 잡혀가는 것 같다고 느꼈습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "BEHKNrSaY1qS",
+        "colab_type": "text"
+      },
+      "source": [
+        "19"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "jrduttFtY8iT",
+        "colab_type": "code",
+        "outputId": "031f4ef6-5fc1-43cb-eca1-b1ee3e52341c",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        }
+      },
+      "source": [
+        "given = (10,(1,2,3),20,30,(10,20),40)\n",
+        "is_tuple = []\n",
+        "for source in given:\n",
+        "  if(isinstance(source,tuple)):\n",
+        "    is_tuple.append(source)\n",
+        "print(\"튜플 내의 원소 중 튜플인 것들: \")\n",
+        "for tuple in is_tuple:\n",
+        "  print(tuple)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "튜플 내의 원소 중 튜플인 것들: \n",
+            "(1, 2, 3)\n",
+            "(10, 20)\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "b5hV4eSTY__-",
+        "colab_type": "text"
+      },
+      "source": [
+        "20"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "AHHgzMUeZBI9",
+        "colab_type": "code",
+        "outputId": "375190df-8e40-4a66-c83d-3d7ef260d3bb",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 108
+        }
+      },
+      "source": [
+        "student_tuple = (('191101','홍길동','010-123-45xx'), ('191102','임꺽정','010-223-45xx'),('191103','장길산','010-323-45xx'))\n",
+        "dictionary = {}\n",
+        "#tup_list = ()                # idle에선 오류가 없이 실행이 되나, colab에서는 오류가 남\n",
+        "#for tup in student_tuple:\n",
+        "#  tup_list += ( tup[0],tup[1] )\n",
+        "#dictionary = dict(tup_list)\n",
+        "for tup in student_tuple:\n",
+        "  dictionary[tup[0]] = tup[1]\n",
+        "print(\"학생정보 : {}\".format(dictionary))\n",
+        "while True:\n",
+        "  number = (input(\"학번을 입력하세요: \"))\n",
+        "  if(number == '-1'):\n",
+        "    print(\"프로그램을 종료합니다.\")\n",
+        "    break\n",
+        "  elif (not(number in dictionary.keys())):\n",
+        "    continue\n",
+        "  print(\"%s번 학생은 %s입니다.\"%(number,dictionary[number]))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "학생정보 : {'191101': '홍길동', '191102': '임꺽정', '191103': '장길산'}\n",
+            "학번을 입력하세요: 191101\n",
+            "191101번 학생은 홍길동입니다.\n",
+            "학번을 입력하세요: -1\n",
+            "프로그램을 종료합니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qDeQmXkQ5h0X",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 반복문과 조건문을 함께 사용하여 복잡했지만 잘 해결할 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pUTighb1Y_xr",
+        "colab_type": "text"
+      },
+      "source": [
+        "21"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "b5TXiUdfZUa8",
+        "colab_type": "code",
+        "outputId": "ae486ae7-853a-49b5-99a4-c3211b4f6f28",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 53
+        }
+      },
+      "source": [
+        "population_A=(100,150,230,120,180,100,140,95,81,21,4)\n",
+        "population_B=(300,420,530,420,400,300,40,5,1,1,1)\n",
+        "count_A=0\n",
+        "count_B=0\n",
+        "for n in population_A[2:]:\n",
+        "  count_A += n\n",
+        "for n in population_B[2:]:\n",
+        "  count_B += n\n",
+        "print(\"마을 A와 B에 보낼 투표용지의 개수는 각각 %d 장과 %d 장입니다.\"%(count_A,count_B))\n",
+        "count_A = 0 \n",
+        "count_B = 0 \n",
+        "for n in population_A[7:]:\n",
+        "  count_A += n\n",
+        "count_A /= sum(population_A)\n",
+        "for n in population_B[7:]:\n",
+        "  count_B += n\n",
+        "count_B /= sum(population_B)\n",
+        "print(\"마을 A와 B의 고령화 정도는 각각 %f와 %f입니다.\"%(count_A,count_B))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "마을 A와 B에 보낼 투표용지의 개수는 각각 971 장과 1698 장입니다.\n",
+            "마을 A와 B의 고령화 정도는 각각 0.164619와 0.003309입니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "tNEKZ8gM5Y5H",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 전체적으로 문제가 복잡하다고 느꼈지만 이제까지 했던 튜플 공부를 이용하여 해결하였습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "O1rB5VDlZWB8",
+        "colab_type": "text"
+      },
+      "source": [
+        "22"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ihpjH82kZX9q",
+        "colab_type": "code",
+        "outputId": "c504c5ed-82e4-47ad-ff72-8ff5bdcc2344",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 89
+        }
+      },
+      "source": [
+        "s1 = set(\"abcd\")\n",
+        "print(\"1) s1 = {}\".format(s1))\n",
+        "s2 = set(\"defg\")\n",
+        "print(\"2) s2 = {}\".format(s2))\n",
+        "print(\"3) s1 == s2 = {}\".format(s1==s2)) \n",
+        "#print('4) s1+s2 = {}'.format(s1+s2))  <-- 에러발생\n",
+        "                                        # 튜플간의 +연산은 지원하지 않음\n",
+        "print(\"5) s1&s2 = {}\".format(s1&s2))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1) s1 = {'d', 'b', 'a', 'c'}\n",
+            "2) s2 = {'f', 'd', 'e', 'g'}\n",
+            "3) s1 == s2 = False\n",
+            "5) s1&s2 = {'d'}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sNq0i39Q5L0f",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 직접 타이핑해보면서 애러가 나는 코드를 찾아보고 원인을 탐색할 수 있었습니다."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "IG1fz_TEZZhC",
+        "colab_type": "text"
+      },
+      "source": [
+        "23"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "gzE25RPXZWrG",
+        "colab_type": "code",
+        "outputId": "5445db1b-dcaa-403e-b730-d9f0018f2ddd",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 126
+        }
+      },
+      "source": [
+        "s1 = {0,1,2,3,4,5}\n",
+        "s2 = {3,4,5,6,7}\n",
+        "print(\"1) s1&s2 = {}\".format(s1&s2))\n",
+        "print(\"2) s1 | s2 = {}\".format(s1|s2))\n",
+        "print(\"3) s2 - s1 = {}\".format(s2-s1))\n",
+        "print(\"4) s1 - s2 = {}\".format(s1-s2))\n",
+        "print(\"5) s1 ^ s2 = {}\".format(s1^s2))\n",
+        "print(\"6) 2 in s1 = {}\".format(2 in s1))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1) s1&s2 = {3, 4, 5}\n",
+            "2) s1 | s2 = {0, 1, 2, 3, 4, 5, 6, 7}\n",
+            "3) s2 - s1 = {6, 7}\n",
+            "4) s1 - s2 = {0, 1, 2}\n",
+            "5) s1 ^ s2 = {0, 1, 2, 6, 7}\n",
+            "6) 2 in s1 = True\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zuBrCtGIZdrI",
+        "colab_type": "text"
+      },
+      "source": [
+        "24"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nZ81tqjBZeU6",
+        "colab_type": "code",
+        "outputId": "e396e8c8-0ba9-47d0-a904-2dcbb3af75b2",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 53
+        }
+      },
+      "source": [
+        "sources = ( ('박동규',90,95,90), ('강영민',85,90,95), ('박동민',70,90,80), ('홍승주',90,90,95) )\n",
+        "math_average = 0\n",
+        "for tup in sources:\n",
+        "  math_average+=tup[2]\n",
+        "math_average/= len(sources)\n",
+        "print(\"학생들의 수학 성적의 평균은 %.2f입니다.\"%(math_average))\n",
+        "average_math_science = 0\n",
+        "i = 0\n",
+        "for tup in sources:\n",
+        "  average_math_science = average_math_science + tup[2] + tup[3]\n",
+        "  i+= 2\n",
+        "average_math_science /= i\n",
+        "print(\"학생들의 수학과 과학 성적의 평균은 %.2f입니다.\"%(average_math_science))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "학생들의 수학 성적의 평균은 91.25입니다.\n",
+            "학생들의 수학과 과학 성적의 평균은 90.62입니다.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UVqAmhmD5AZv",
+        "colab_type": "text"
+      },
+      "source": [
+        "느낀점: 튜플에서 배운것들을 종합적으로 활용하여 문제를 해결할 수 있었습니다."
+      ]
+    }
+  ]
+}
